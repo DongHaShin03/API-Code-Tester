@@ -19,8 +19,8 @@ Then write this commands on the command prompt (terminal):
 ```
 
 The `executable` depends on the topic: 
-- If you are in the folder "Sorting" ==> ./sort n1> n2> `. 
-  ```<n1>``` and ```<n2>``` are, respectively, the wanted sorting algorithm and the size of the array A to be sorted. 
+- If you are in the folder "Sorting" ==> ./sort <n1> <n2> 
+  `<n1>` and `<n2>` are, respectively, the wanted sorting algorithm and the size of the array A to be sorted. 
   The available sorters are: 
   - 0 -> Insertion Sort  |  $T(n) = O(n^2)$ 
   - 1 -> Merge Sort      |  $T(n) = O(nlog(n))$
