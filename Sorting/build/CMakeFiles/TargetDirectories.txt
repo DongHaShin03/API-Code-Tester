@@ -1,0 +1,3 @@
+/shared/Coding/API-Code-Tester/Sorting/build/CMakeFiles/sort.dir
+/shared/Coding/API-Code-Tester/Sorting/build/CMakeFiles/edit_cache.dir
+/shared/Coding/API-Code-Tester/Sorting/build/CMakeFiles/rebuild_cache.dir

@@ -23,7 +23,7 @@ vec generateRandomVector(int n) {
 void insertion_sort(vec& A)
 {
     if(A.size() == 1) return; 
-    for(int j = 1; j < A.size(); ++j)
+    for(size_t j = 1; j < A.size(); ++j)
     {
         int k = A[j]; 
         int i = j-1; 
@@ -68,7 +68,6 @@ void merge(vec& A, int p, int q, int r)
 
 void merge_sort(vec&A, int p, int r)
 {
-    clock_t t0 = clock(); 
     if(p < r)
     {
         int q = p + (r - p) / 2; 
@@ -77,17 +76,6 @@ void merge_sort(vec&A, int p, int r)
         merge(A, p, q, r); 
     }
 }
-
-// === HEAP SORT === 
-//[0, 1, 2, 3, 4, 5, 6]
-// 2 * 0 + 1 = 1; 
-// 2 * 0 + 2 = 2; 
-// 2 * 1 + 1 = 3
-// 2 * 1 + 2 = 4; 
-// ceil(4 / 2) - 1 = 1; 
-// ceil(3 / 2) - 1
-// ceil(1/2) - 1; 
-
 
 class HeapSort
 {   
@@ -143,7 +131,7 @@ void printVector(vec& A)
         return; 
     }
     std::cout << "{"; 
-    for(int i = 0; i < A.size() - 1; ++i)
+    for(size_t i = 0; i < A.size() - 1; ++i)
         std::cout << A[i] << ", "; 
 
     std::cout << A[A.size()-1] << "}" << std::endl; 
@@ -175,5 +163,5 @@ void test(vec& A, int mode)
         printVector(A); 
     clock_t tf = clock() - t0; 
     double seconds = ((double)tf) / CLOCKS_PER_SEC;
-    std::cout << "Total time " << sort << " (seconds): " << seconds << std::endl; 
+    std::cout << "\n=== Total time " << sort << " (seconds): " << seconds << " ===\n" << std::endl; 
 }
