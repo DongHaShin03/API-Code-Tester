@@ -52,6 +52,9 @@ void test(vec& A, int mode)
         case 2: 
             sorter = make_unique<HeapSort>(A); 
             break; 
+        case 3: 
+            sorter = make_unique<QuickSort>(A); 
+            break; 
     }
     
     sorter -> sort(); 

@@ -158,3 +158,41 @@ class HeapSort : public Sorter
             seconds = ((double)tf) / CLOCKS_PER_SEC;
         }
 };
+
+class QuickSort : public Sorter
+{   
+    private: 
+        int partition(int p, int r)
+        {
+            int pivot = A[r]; 
+            int i = p-1; 
+            for(int j = p; j < r; ++j)
+            {
+                if(A[j] <= pivot)
+                {
+                    ++i; 
+                    swap(A[i], A[j]); 
+                }
+            }
+            swap(A[i+1], A[r]); 
+            return i+1; 
+        }
+        void quick_sort(int p, int r)
+        {
+            if(p < r)
+            {
+                int q = partition(p, r); 
+                quick_sort(p, q-1); 
+                quick_sort(q+1, r); 
+            }
+        }
+    public: 
+        QuickSort(vec& A_) : Sorter(A_) {sorterName = "QUICK SORT";}
+        virtual void sort() override
+        {
+            clock_t t0 = clock(); 
+            quick_sort(0, A.size()-1); 
+            clock_t tf = clock() - t0; 
+            seconds = ((double)tf) / CLOCKS_PER_SEC;
+        }
+};
