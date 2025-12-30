@@ -1,4 +1,4 @@
-#include "Sorter.hpp"
+#include "../include/Helper.hpp"
 
 int main(int argc, char* argv[])
 {

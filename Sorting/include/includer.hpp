@@ -6,5 +6,6 @@
 #include <climits>
 #include <random> 
 #include <algorithm> 
+#include <memory>
 
 using namespace std; 
