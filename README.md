@@ -22,9 +22,10 @@ The `executable` depends on the topic:
 - If you are in the folder "Sorting" ==> ./sort <n1> <n2> 
   `<n1>` and `<n2>` are, respectively, the wanted sorting algorithm and the size of the array A to be sorted. 
   The available sorters are: 
-  - 0 -> Insertion Sort  |  $T(n) = O(n^2)$ 
-  - 1 -> Merge Sort      |  $T(n) = O(nlog(n))$
-  - 2 -> Heap Sort       |  $T(n) = O(nlog(n))$
+  - 0 -> Insertion Sort  |  $T(n) = \Theta{n^2}$ 
+  - 1 -> Merge Sort      |  $T(n) = \Theta{nlog(n)}$
+  - 2 -> Heap Sort       |  $T(n) = \Theta{nlog(n)}$
+  - 3 -> Quick Sort      |  $T(n) = \Theta{nlog(n)}$ (Avarage Case)
 
 
 
